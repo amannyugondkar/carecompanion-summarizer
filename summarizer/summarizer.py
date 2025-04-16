@@ -6,7 +6,10 @@ class Summarizer:
     def __init__(self):
         self.api_url = "https://api-inference.huggingface.co/models/Aadityaramrame/carecompanion-summarizer"
         self.api_token = os.getenv("API_KEY")
-        self.headers = {"Authorization": f"Bearer {self.api_token}"}
+        self.headers = {
+        "Authorization": f"Bearer {self.api_token}",
+        "Content-Type": "application/json"
+        }
         self.translator = TextTranslator()
         print("HuggingFace API Key:", self.api_token)
 
