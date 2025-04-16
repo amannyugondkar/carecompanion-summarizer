@@ -21,6 +21,5 @@ def summarize():
     summary = summarizer.summarize_text(text, target_lang)
     return jsonify({"summary": summary})
 
-# Ensure the app listens on the correct port assigned by Render
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 10000)))
