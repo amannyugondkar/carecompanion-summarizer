@@ -1,0 +1,5 @@
+flask
+requests
+langdetect
+transformers
+googletrans==4.0.0-rc1
