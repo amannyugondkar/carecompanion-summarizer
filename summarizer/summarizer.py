@@ -8,6 +8,7 @@ class Summarizer:
         self.api_token = os.getenv("API_KEY")
         self.headers = {"Authorization": f"Bearer {self.api_token}"}
         self.translator = TextTranslator()
+        print("HuggingFace API Key:", self.api_token)
 
     def clean_text(self, text):
         return ' '.join(text.replace('\n', ' ').split())
