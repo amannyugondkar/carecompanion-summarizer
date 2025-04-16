@@ -5,13 +5,13 @@ import os
 app = Flask(__name__)
 summarizer = Summarizer()
 
-@app.route("/")
+@app.route("/", methods=["GET"])
 def home():
     return "CareCompanion Summarizer API is running."
 
 @app.route("/summarize", methods=["POST"])
 def summarize():
-    data = request.get_json()
+    data = request.get_json(force-True)
     text = data.get("text")
     target_lang = data.get("target_lang", "en")
 
